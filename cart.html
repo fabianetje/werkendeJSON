@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winkelwagen - Étoile Atelier</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="cart-page"> <!-- Verplaatst naar de juiste plek -->
+
+    <header>
+        <a href="index.html" class="logo">
+            <span class="etoile">ÉTOILE</span>
+            <span class="atelier">ATELIER</span>
+        </a>
+
+        <div class="categories">
+            <a href="#men">MEN</a>
+            <a href="#women">WOMEN</a>
+            <a href="#kids">KIDS</a>
+            <a href="#knitwear">KNITWEAR</a>
+        </div>
+
+        <nav>
+            <ul class="icons">
+                <li><a href="#"><i class="fas fa-user"></i></a></li>
+                <li><a href="#"><i class="fas fa-phone"></i></a></li>
+                <li><a href="favorites.html"><i class="fas fa-heart"></i></a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-bag"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="cart-container">
+        <h2>Jouw Winkelwagen</h2>
+        <div class="cart-items">
+            <!-- Dynamische inhoud wordt hier toegevoegd via script.js -->
+        </div>
+
+        <div class="cart-summary">
+            <h3>Totaal: <span class="total-price">€0,00</span></h3>
+            <!-- Voeg deze knop toe op je winkelwagenpagina -->
+            <a href="checkout.html" class="checkout-button">AFREKENEN</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="payment-options">
+            <div class="payment-icons">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-paypal"></i>
+                <img src="iDEAL.png" alt="iDEAL"/>
+            </div>
+        </div>
+        <p>&copy; 2025 Étoile Atelier - Alle rechten voorbehouden</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

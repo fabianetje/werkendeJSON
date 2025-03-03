@@ -1,0 +1,26 @@
+[
+  {
+      "name": "White Knit With Logo",
+      "oldPrice": "49,95",
+      "newPrice": "39,95",
+      "image": "product1.jpg"
+  },
+  {
+      "name": "White Knit With Logo 2",
+      "oldPrice": "59,95",
+      "newPrice": "49,95",
+      "image": "product2.jpg"
+  },
+  {
+      "name": "White Knit With Logo 3",
+      "oldPrice": "69,95",
+      "newPrice": "59,95",
+      "image": "product3.jpg"
+  },
+  {
+      "name": "White Knit With Logo 4",
+      "oldPrice": "79,95",
+      "newPrice": "69,95",
+      "image": "product4.jpg"
+  }
+]

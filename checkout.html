@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afrekenen</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Voeg hier je eigen CSS-bestand toe -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .tikkie-button {
+            width: 75px; /* Pas de grootte van de afbeelding aan indien nodig */
+            height: auto;
+            display: none; /* Begin met het verbergen van de knop */
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 10px; /* Afgeronde hoeken voor de afbeelding */
+            transition: all 0.3s ease-in-out; /* Voor een soepele overgang bij hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Voeg een schaduw toe bij hover */
+        }
+
+        .tikkie-button:hover {
+            transform: scale(1.1); /* Maak de knop groter bij hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Voeg een schaduw toe bij hover */
+        }
+
+        .tikkie-text {
+            margin-top: 10px;
+            font-size: 15px; /* Maak de tekst groter */
+            color: #000000; /* Mooie blauwe kleur voor de tekst */
+            font-weight: bold; /* Maak de tekst vetter */
+            display: none; /* Begin met het verbergen van de tekst */
+        }
+    </style>
+</head>
+<body>
+    <header>
+         <a href="index.html" class="logo">
+            <span class="etoile">ÉTOILE</span>
+            <span class="atelier">ATELIER</span>
+        </a>
+        <h1>Afrekenen</h1>
+        <nav>
+            <ul class="icons">
+                <li><a href="#"><i class="fas fa-user"></i></a></li>
+                <li><a href="#"><i class="fas fa-phone"></i></a></li>
+                <li><a href="favorites.html"><i class="fas fa-heart"></i></a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-bag"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cart-summary">
+            <h2>Jouw winkelwagen</h2>
+            <div class="cart-items"></div>
+            <div class="total-price">Totaal: €0,00</div>
+        </section>
+
+        <section class="checkout-form">
+            <h2>Jouw gegevens</h2>
+            <form id="checkout-form">
+                <label for="name">Naam:</label>
+                <input type="text" id="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <label for="address">Adres:</label>
+                <input type="text" id="address" required>
+
+                <button type="button" class="checkout-button" onclick="checkForm()">AFREKENEN</button> <!-- Verander naar type="button" -->
+
+                <!-- Voeg hier de Tikkie betaalmethode toe als afbeelding -->
+                <a href="https://tikkie.me/pay/md8t5abkkq7houudh8r1" target="_blank">
+                    <img src="tikki.jpg" alt="Betaal via Tikkie" class="tikkie-button" id="tikkie-button">
+                </a>
+
+                <!-- Tekst onder de Tikkie-knop -->
+                <div class="tikkie-text" id="tikkie-text">
+                    Betaal met Tikkie!
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="payment-options">
+            <div class="payment-icons">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-paypal"></i>
+                <img src="iDEAL.png" alt="iDEAL"/>
+            </div>
+        </div>
+        <p>&copy; 2025 Étoile Atelier - Alle rechten voorbehouden</p>
+    </footer>
+
+    <script src="checkout.js"></script> <!-- Voeg hier je JS-bestand toe -->
+
+    <script>
+        function checkForm() {
+            // Verkrijg de waarden van de formuliervelden
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var address = document.getElementById("address").value;
+
+            // Als alle velden zijn ingevuld, toon de Tikkie-knop en de tekst
+            if (name && email && address) {
+                document.getElementById("tikkie-button").style.display = "block"; // Maak de Tikkie-knop zichtbaar
+                document.getElementById("tikkie-text").style.display = "block";  // Maak de tekst zichtbaar
+            } else {
+                alert("Vul alstublieft alle velden in.");
+            }
+        }
+    </script>
+</body>
+</html>
